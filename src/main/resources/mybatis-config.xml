@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd"  >
+
+<configuration>
+
+	<settings>
+		<!-- 1 开启驼峰命名 -->
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+	<!-- 2 全局别名设置，在映射文件中只需要写别名，而不必写出整个类路径 -->
+	 <typeAliases> 
+	<package name="com.huawei.crud.bean"  /> 
+	</typeAliases>
+<!--3 使用pagehelper分页对员工表数据进行展示  -->
+<plugins>
+    <plugin interceptor="com.github.pagehelper.PageInterceptor">
+        <!-- 使用下面的方式配置参数，后面会有所有的参数介绍 -->
+       <!--  <property name="param1" value="value1"/> -->
+       <!--分页参数合理化  -->
+			<property name="reasonable" value="true"/>
+	</plugin>
+</plugins>
+
+</configuration>
+

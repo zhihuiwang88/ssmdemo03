@@ -1,0 +1,41 @@
+
+
+1）访问路径
+http://localhost:8083/yiyisancrud/
+
+2)使用技术框架
+spring + springMVC + mybatis(Mybatis-Generator) + tomcat + maven + bootstrap 
+
+3）WeChat：NHNMAMTF
+
+4)今日头条
+https://www.toutiao.com/c/user/6207413939/#mid=6221726777
+
+5)实体类
+
+CREATE TABLE `tbl_dept` (
+   `dept_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(部门表)',
+   `dept_name` varchar(255) NOT NULL COMMENT '部门名',
+   PRIMARY KEY (`dept_id`)
+ ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8
+
+
+
+
+
+CREATE TABLE `tbl_emp` (
+   `emp_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键(员工表)',
+   `emp_name` varchar(255) NOT NULL COMMENT '姓名',
+   `gender` varchar(10) DEFAULT NULL COMMENT '性别',
+   `email` varchar(255) DEFAULT NULL COMMENT '邮箱',
+   `d_id` int(11) DEFAULT NULL COMMENT '外键',
+   PRIMARY KEY (`emp_id`),
+   KEY `FK_emp_dept` (`d_id`),
+   CONSTRAINT `FK_emp_dept` FOREIGN KEY (`d_id`) REFERENCES `tbl_dept` (`dept_id`)
+ ) ENGINE=InnoDB AUTO_INCREMENT=148 DEFAULT CHARSET=utf8
+
+
+
+
+
+
