@@ -54,7 +54,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-webmvc</artifactId>
-    <version>5.0.3.RELEASE</version>
+    <version>5.3.18</version>
 </dependency>
 
 <!-- Spring  JDBC -->
